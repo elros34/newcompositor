@@ -16,6 +16,7 @@ BuildRequires:  opt-qt5-qtdeclarative-devel >= 5.15.8
 BuildRequires:  opt-qt5-qtquickcontrols2-devel >= 5.15.8
 BuildRequires:  opt-qt5-qtwayland-devel >= 5.15.8
 BuildRequires:  pkgconfig(wayland-server)
+BuildRequires:  pkgconfig(xkbcommon)
 BuildRequires:  systemd
 %{?opt_qt5_default_filter}
 
