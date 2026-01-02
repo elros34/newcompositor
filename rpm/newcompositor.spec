@@ -15,9 +15,6 @@ BuildRequires:  opt-qt5-qtbase-devel >= 5.15.8
 BuildRequires:  opt-qt5-qtdeclarative-devel >= 5.15.8
 BuildRequires:  opt-qt5-qtquickcontrols2-devel >= 5.15.8
 BuildRequires:  opt-qt5-qtwayland-devel >= 5.15.8
-BuildRequires:  pkgconfig(xcb)
-BuildRequires:  pkgconfig(xcb-composite)
-BuildRequires:  pkgconfig(xkbcommon)
 BuildRequires:  pkgconfig(wayland-server)
 BuildRequires:  systemd
 %{?opt_qt5_default_filter}
@@ -40,7 +37,7 @@ Requires:   %{name} = %{version}
 
 %build
 sed -e 's|@@LIB@@|%{_libdir}|g' %{name}.sh.in > %{name}
-%{opt_qmake_qt5} CONFIG+=qt-runner-compat CONFIG+=xwayland
+%{opt_qmake_qt5} CONFIG+=qt-runner-compat
 %make_build
 
 %install
